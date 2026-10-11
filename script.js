@@ -25,7 +25,7 @@
    Edit these values to change the store's settings.
    ========================================================================== */
 
-const WHATSAPP_NUMBER = "255XXXXXXXXX";
+const WHATSAPP_NUMBER = "255663466007";
 const STORE_NAME = "A2 Sundries";
 const CART_STORAGE_KEY = "a2SundriesCart";
 
