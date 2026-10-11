@@ -17,6 +17,7 @@
    11. Event listeners
    12. Active category tracking
    13. Website initialization
+   
    ========================================================================== */
 
 
