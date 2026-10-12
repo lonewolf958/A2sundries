@@ -1,11 +1,10 @@
-
 /* ==========================================================================
    A2 SUNDRIES — ORDER PAGE SCRIPT
    Product catalogue, search, cart, checkout and WhatsApp ordering.
 
    FILE GUIDE
-   1. Settings and configuration       (at the top of your existing file)
-   2. Product catalogue                (keep your existing CATALOG unchanged)
+   1. Settings and configuration
+   2. Product catalogue
    3. Helpers and product preparation
    4. Product display and categories
    5. Product search
@@ -17,7 +16,7 @@
    11. Event listeners
    12. Active category tracking
    13. Website initialization
-   
+
    ========================================================================== */
 
 
@@ -61,11 +60,10 @@ const ZONES = {
 
 /* ==========================================================================
    2. PRODUCT CATALOGUE
-   Keep your existing CATALOG array here, unchanged.
-
-/* ---------- Product list ----------
    [ "Product name", price in TSh ]
-   To add or change a product, edit a line below. */
+   Items are listed alphabetically within each category, with no repeats.
+   To add or change a product, edit a line below.
+   ========================================================================== */
 
 const CATALOG = [
   {
@@ -77,8 +75,8 @@ const CATALOG = [
       ["Azam HBF 5kg", 10000],
       ["Azam PPF 1kg", 3500],
       ["Azam PPF 5kg", 12000],
-      ["Bulbul 40kgs", 185000],
       ["Bulbul 5kg", 25000],
+      ["Bulbul 40kgs", 185000],
       ["Coco Pops", 21000],
       ["CornFlakes 450G", 14000],
       ["Gautam 5kgs", 25000],
@@ -100,8 +98,8 @@ const CATALOG = [
       ["A1 Vermicelli", 2000],
       ["Buldak Cheese", 6000],
       ["Color Vermicelli", 2000],
-      ["Indomie 120g", 1500],
       ["Indomie 70G", 1000],
+      ["Indomie 120g", 1500],
       ["Mo Spaghetti 450G", 2000],
       ["Olivoila Macaroni 500G", 2500],
       ["Olivoila Spaghetti", 2000],
@@ -116,27 +114,24 @@ const CATALOG = [
       ["Aseel Veg Ghee", 12000],
       ["Ava Sunflower Oil 5l", 35000],
       ["Brinto 1L", 7500],
-      ["Brinto 5l", 32000]
-      ["Blue Band 1KG", 11000],
+      ["Brinto 5l", 32000],
       ["Chili Oil", 14000],
       ["Kilimanjaro Ghee 1L", 23000],
       ["Minara Coconut Oil", 2500],
+      ["Prestige 1kg", 9000],
+      ["Prestige 10kg", 73000],
       ["Raja Mustard Oil 500ml", 7500],
       ["SG Olive Oil 1L", 13000],
       ["ST Olive Oil 1L", 13000],
       ["Til Oil 500ml", 8000],
-      ["Prestige 1kg", 9000],
-      ["Prestige 10kg", 73000],
-      ["Brinto 1L", 7500],
-      ["Brinto 5l", 32000],
       ["Yara 5L", 28000]
     ]
   },
   {
     name: "Sugar, Tea & Coffee",
     items: [
-      ["Africafe 250g", 26000],
       ["Africafe 50g", 8000],
+      ["Africafe 250g", 26000],
       ["Bf Jaggery 1kg", 7000],
       ["Boost 500g", 15000],
       ["Brazilian Sugar 50Kg", 138000],
@@ -169,8 +164,8 @@ const CATALOG = [
       ["Eggs Tray", 10000],
       ["Fresho Cream 150g", 2500],
       ["Fresho Evaporated Milk Ctn", 145000],
-      ["Golden Cream 170g", 2500],
       ["Golden Cream 48", 95000],
+      ["Golden Cream 170g", 2500],
       ["Kilimanjaro UHT Milk 450ml", 17000],
       ["Lato Milk 2.5kg", 55000],
       ["Luna 48pcs", 190000],
@@ -280,12 +275,12 @@ const CATALOG = [
   {
     name: "Sauces & Cooking Needs",
     items: [
+      ["Afya Nazi", 1000],
       ["Ag Ketchup 340g", 4000],
       ["Ag Mayonnaise 887ml", 22000],
-      ["Afya Nazi", 1000],
+      ["Al Mudhish Tomato Paste", 13000],
       ["Azam Nazi 36Pcs", 34000],
       ["Azam Nazi 65ml", 1000],
-      ["Al Mudhish Tomato Paste", 13000],
       ["Burhan Rose Syrup", 6000],
       ["Canadian Lemon Juice", 9000],
       ["CH Bongo Habanero", 5500],
@@ -296,7 +291,6 @@ const CATALOG = [
       ["Golden Harvest Dark Soy Sauce", 6000],
       ["Golden Harvest Soy Sauce Light", 6000],
       ["Golden Harvest Sweetcorn", 3000],
-      ["Salim Cheese Triangle", 4000],
       ["Goldvalley Olives 340g Pitted", 6500],
       ["Goldvalley SC Mayo", 5500],
       ["Heinz Hot Sauce", 2500],
@@ -312,6 +306,7 @@ const CATALOG = [
       ["Redgold Tomato Sauce 5kgs", 4500],
       ["Redgold Vinegar 965ml", 1500],
       ["Royal Soy Sauce 1000ml", 7000],
+      ["Salim Cheese Triangle", 4000],
       ["Schezwan Chutney 1kg", 14000],
       ["SG CHOCOLATE SYRUP", 8000],
       ["Sg Mushrooms", 3500],
@@ -416,6 +411,7 @@ const CATALOG = [
       ["Asas Apple 1Ltr", 4500],
       ["Atiya Melo 1L", 3500],
       ["Atiya Tropical 1L", 3500],
+      ["Basil Seeds", 3000],
       ["Ceres 275ml", 4000],
       ["Ceres Tropical 1L", 6000],
       ["Cocacola 330ml", 2500],
@@ -423,7 +419,6 @@ const CATALOG = [
       ["Hill Sparkling Lemon Mint 750ML", 17500],
       ["Kilimanjaro 12Ltr", 4000],
       ["Kisima 16Ltr", 6500],
-      ["Basil Seeds", 3000],
       ["Pakola Syrup", 11000],
       ["Pepsi 2ltr", 3000],
       ["Pure Heaven Sparkling Juice", 13000],
@@ -444,8 +439,8 @@ const CATALOG = [
   {
     name: "Cleaning & Laundry",
     items: [
-      ["750g Steelwool", 6000],
       ["75g Steel Wool", 1000],
+      ["750g Steelwool", 6000],
       ["Aer Power Pocket", 5000],
       ["Air Freshener", 3500],
       ["All Out Refill", 6000],
@@ -614,7 +609,6 @@ const CATALOG = [
     ]
   }
 ];
-
 
 
 /* ==========================================================================
