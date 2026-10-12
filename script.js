@@ -63,17 +63,6 @@ const ZONES = {
    2. PRODUCT CATALOGUE
    Keep your existing CATALOG array here, unchanged.
 
-   To add a product:
-   ["Product name", price]
-
-   To add a category:
-   {
-     name: "Category Name",
-     items: [
-       ["Product name", price]
-     ]
-   }
-   ========================================================================== */
 /* ---------- Product list ----------
    [ "Product name", price in TSh ]
    To add or change a product, edit a line below. */
@@ -88,7 +77,6 @@ const CATALOG = [
       ["Azam HBF 5kg", 10000],
       ["Azam PPF 1kg", 3500],
       ["Azam PPF 5kg", 12000],
-      ["Basil Seeds", 3000],
       ["Bulbul 40kgs", 185000],
       ["Bulbul 5kg", 25000],
       ["Coco Pops", 21000],
@@ -99,8 +87,6 @@ const CATALOG = [
       ["Korie 1kg", 3000],
       ["Korie 5KG", 15000],
       ["Ppf 25kgs", 54000],
-      ["Prestige 10KG", 73000],
-      ["Prestige 1kg", 9000],
       ["Quaker Oats 500g", 8500],
       ["Roasted Gram BF", 5000],
       ["Sona Masoori 18kgs", 100000],
@@ -129,6 +115,9 @@ const CATALOG = [
       ["Aseel Pure Ghee 400ml", 10000],
       ["Aseel Veg Ghee", 12000],
       ["Ava Sunflower Oil 5l", 35000],
+      ["Brinto 1L", 7500],
+      ["Brinto 5l", 32000]
+      ["Blue Band 1KG", 11000],
       ["Chili Oil", 14000],
       ["Kilimanjaro Ghee 1L", 23000],
       ["Minara Coconut Oil", 2500],
@@ -136,6 +125,10 @@ const CATALOG = [
       ["SG Olive Oil 1L", 13000],
       ["ST Olive Oil 1L", 13000],
       ["Til Oil 500ml", 8000],
+      ["Prestige 1kg", 9000],
+      ["Prestige 10kg", 73000],
+      ["Brinto 1L", 7500],
+      ["Brinto 5l", 32000],
       ["Yara 5L", 28000]
     ]
   },
@@ -210,8 +203,7 @@ const CATALOG = [
       ["Paneer 500G", 9000],
       ["QMP Chicken Burger", 12000],
       ["Sadia Chicken Franks", 6000],
-      ["Sadia Chicken Nuggets", 7000],
-      ["Salim Cheese Triangle", 4000]
+      ["Sadia Chicken Nuggets", 7000]
     ]
   },
   {
@@ -290,6 +282,9 @@ const CATALOG = [
     items: [
       ["Ag Ketchup 340g", 4000],
       ["Ag Mayonnaise 887ml", 22000],
+      ["Afya Nazi", 1000],
+      ["Azam Nazi 36Pcs", 34000],
+      ["Azam Nazi 65ml", 1000],
       ["Al Mudhish Tomato Paste", 13000],
       ["Burhan Rose Syrup", 6000],
       ["Canadian Lemon Juice", 9000],
@@ -301,6 +296,7 @@ const CATALOG = [
       ["Golden Harvest Dark Soy Sauce", 6000],
       ["Golden Harvest Soy Sauce Light", 6000],
       ["Golden Harvest Sweetcorn", 3000],
+      ["Salim Cheese Triangle", 4000],
       ["Goldvalley Olives 340g Pitted", 6500],
       ["Goldvalley SC Mayo", 5500],
       ["Heinz Hot Sauce", 2500],
@@ -416,13 +412,10 @@ const CATALOG = [
       ["Afya 13L", 4500],
       ["Afya 250ml", 3000],
       ["Afya 500ML", 4000],
-      ["Afya Nazi", 1000],
       ["Afya Water 500ml", 500],
       ["Asas Apple 1Ltr", 4500],
       ["Atiya Melo 1L", 3500],
       ["Atiya Tropical 1L", 3500],
-      ["Azam Nazi 36Pcs", 34000],
-      ["Azam Nazi 65ml", 1000],
       ["Ceres 275ml", 4000],
       ["Ceres Tropical 1L", 6000],
       ["Cocacola 330ml", 2500],
@@ -430,6 +423,7 @@ const CATALOG = [
       ["Hill Sparkling Lemon Mint 750ML", 17500],
       ["Kilimanjaro 12Ltr", 4000],
       ["Kisima 16Ltr", 6500],
+      ["Basil Seeds", 3000],
       ["Pakola Syrup", 11000],
       ["Pepsi 2ltr", 3000],
       ["Pure Heaven Sparkling Juice", 13000],
@@ -438,6 +432,7 @@ const CATALOG = [
       ["Safia Water 13L", 4500],
       ["Safia Water 19L", 6500],
       ["Shani Can 250ml", 3000],
+      ["Switch", 5000],
       ["Tang Mango", 10000],
       ["Tang Orange", 10000],
       ["Tang Pineapple", 10000],
@@ -458,8 +453,6 @@ const CATALOG = [
       ["Aro Toilet Cleaner", 7000],
       ["Astra Handwash 5l", 12000],
       ["Axion 750g", 11000],
-      ["Brinto 1L", 7500],
-      ["Brinto 5l", 32000],
       ["CareX Dishwash 5ltr", 10000],
       ["CareX Glass Cleaner", 3500],
       ["CareX Handwash", 2500],
@@ -528,7 +521,6 @@ const CATALOG = [
     name: "Paper & Tissues",
     items: [
       ["Maxi Roll", 10000],
-      ["Rexa Strawberry", 3500],
       ["Rexa Toilet Rolls 40pcs", 24000],
       ["Shwari Facial Tissues Pack of 5", 8000],
       ["Tausi Toilet Rolls", 9000],
@@ -597,11 +589,13 @@ const CATALOG = [
       ["Mop Bucket", 11000],
       ["Mop Large", 10000],
       ["Office Bin", 3500],
+      ["Papoo Lemon", 3500],
       ["Pedal Dustbin", 12000],
       ["Plastic Bucket 20L", 8000],
       ["Plastic Rack", 8000],
       ["Red Gloves", 6000],
       ["Relax Slippers", 14000],
+      ["Rexa Strawberry", 3500],
       ["Rubber Squeegee", 4000],
       ["Soft Broom", 3500],
       ["Soft Fagio (Broom)", 3000],
@@ -616,9 +610,7 @@ const CATALOG = [
     name: "Other Items",
     items: [
       ["ENO", 8500],
-      ["Joshanda", 1000],
-      ["Papoo Lemon", 3500],
-      ["Switch", 5000]
+      ["Joshanda", 1000]
     ]
   }
 ];
