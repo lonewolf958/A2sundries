@@ -62,69 +62,43 @@ h1, h2, h3, p { margin: 0; }
 .brand-sub { font-size: 12.5px; color: var(--ink-soft); }
 
 /* ==========================================================================
-   HEADER: OPENING HOURS + PHONE
+   HEADER: OPENING HOURS + PHONE (simple, no boxes)
    Paste this block at the very bottom of style.css (after everything else).
+   If you pasted the earlier version, delete it first and use this one instead.
    ========================================================================== */
 
 .header-strip-item {
   display: flex;
   align-items: center;
-  gap: 10px;
-  flex: 1 1 100%;                 /* full width on phones */
-  padding: 10px 14px;
-  background: var(--green-soft);
-  border: 1px solid var(--line);
-  border-radius: var(--r-md);
-  font-size: 13px;
+  gap: 8px;
+  flex: 1 1 100%;
+  padding: 0;
+  background: none;
+  border: 0;
+  font-size: 13.5px;
   font-weight: 500;
-  line-height: 1.45;
+  line-height: 1.5;
   color: var(--green-deep);
 }
 
-/* Round icon badge */
 .header-icon {
   flex: 0 0 auto;
-  width: 36px;
-  height: 36px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 50%;
-  background: var(--paper);
-  border: 1px solid var(--line);
-  font-size: 17px;
+  font-size: 16px;
   line-height: 1;
 }
 
-/* Phone number: orange call button */
-.header-strip-item:last-child {
-  background: var(--orange);
-  border-color: var(--orange);
-  padding: 0;
-}
-.header-strip-item:last-child .header-icon {
-  margin-left: 8px;
-  background: rgba(255, 255, 255, 0.22);
-  border-color: transparent;
-}
-.header-strip-item:last-child a {
-  flex: 1 1 auto;
-  padding: 12px 18px 12px 0;
-  color: #fff;
-  font-weight: 700;
-  font-size: 17px;
-  letter-spacing: 0.02em;
+/* Phone number: plain text, not styled like a link */
+.header-strip-item a {
+  color: var(--green-deep);
+  font-weight: 600;
+  font-size: 14px;
   text-decoration: none;
-  white-space: nowrap;
 }
-.header-strip-item:last-child:hover { background: var(--orange-deep); border-color: var(--orange-deep); }
-.header-strip-item:last-child a:focus-visible { outline: 3px solid var(--green); outline-offset: 2px; border-radius: 999px; }
 
 /* Larger screens: sit on the right of the logo and name */
 @media (min-width: 900px) {
   .header-strip-item { flex: 0 0 auto; }
 }
-
 /* ---------- Sticky search + categories ---------- */
 .shop-bar {
   position: sticky; top: 0; z-index: 50;
